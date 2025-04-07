@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Please take a moment to complete this survey</p>
+
+      <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required />
+
+        <label for="number" id="number-label">Age</label>
+        <input type="number" id="number" name="age" placeholder="18" min="18" max="100" required />
+
+        <fieldset>
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="male" required />Male</label>
+          <label><input type="radio" name="gender" value="female" />Female</label>
+          <label><input type="radio" name="gender" value="others" />Others</label>
+        </fieldset>
+
+        <label for="dropdown">Favourite programming language</label>
+        <select id="dropdown" name="language" required>
+          <option value="golang">Golang</option>
+          <option value="java">Java</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="ruby">Ruby</option>
+        </select>
+
+        <fieldset>
+          <legend>What's your go to IDE</legend>
+          <label><input type="checkbox" name="technologies" value="githubcodespaces" />Github CodeSpaces</label>
+          <label><input type="checkbox" name="technologies" value="jetbrains" />JetBrains Rider</label>
+          <label><input type="checkbox" name="technologies" value="sublime" />Sublime</label>
+          <label><input type="checkbox" name="technologies" value="vscode" />Visual Studio Code</label>
+          <label><input type="checkbox" name="technologies" value="webstorm" />WebStrom</label>
+        </fieldset>
+
+        <label for="comments">Any feedbacks ?</label>
+        <textarea id="feedback" name="feedback" placeholder="Write your feedbacks here..." rows="5"></textarea>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
